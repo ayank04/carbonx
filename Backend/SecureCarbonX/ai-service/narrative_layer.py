@@ -4,13 +4,18 @@ from groq import Groq
 class NarrativeLayer:
     def __init__(self):
         GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-        if not GROQ_API_KEY:
-            raise RuntimeError("GROQ_API_KEY missing in environment")
-        self.groq_client = Groq(api_key=GROQ_API_KEY)
+        if GROQ_API_KEY:
+            self.groq_client = Groq(api_key=GROQ_API_KEY)
+        else:
+            self.groq_client = None
+            print("WARNING: GROQ_API_KEY missing, NarrativeLayer will use fallback content.")
         self.narrative_model = "llama-3.3-70b-versatile"
 
     def generate_narrative(self, activity: str, impact: dict, vision: dict) -> str:
         try:
+            if not self.groq_client:
+                raise Exception("No Groq client available, skipping narrative generation.")
+
             prompt = (
                 f"Activity: {activity}\n"
                 f"Impact score: {impact['impact_score']}/100\n"
@@ -39,6 +44,9 @@ class NarrativeLayer:
 
     def generate_what_is_happening(self, vision: dict, activity: str) -> str:
         try:
+            if not self.groq_client:
+                raise Exception("No Groq client available, skipping what_is_happening generation.")
+
             prompt = (
                 f"Objects clearly visible in image: {vision.get('objects', [])}\n"
                 f"Actions clearly visible: {vision.get('actions', [])}\n"
@@ -69,6 +77,9 @@ class NarrativeLayer:
 
     def generate_improvements(self, activity: str, impact: dict, vision: dict) -> list:
         try:
+            if not self.groq_client:
+                raise Exception("No Groq client available, skipping improvements generation.")
+
             prompt = (
                 f"Activity: {activity.replace('_', ' ')}\n"
                 f"Impact score: {impact['impact_score']}/100\n"

@@ -7,9 +7,11 @@ from ultralytics import YOLO
 class VisionLayer:
     def __init__(self):
         GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-        if not GROQ_API_KEY:
-            raise RuntimeError("GROQ_API_KEY missing in environment")
-        self.groq_client = Groq(api_key=GROQ_API_KEY)
+        if GROQ_API_KEY:
+            self.groq_client = Groq(api_key=GROQ_API_KEY)
+        else:
+            self.groq_client = None
+            print("WARNING: GROQ_API_KEY missing, VisionLayer will use YOLO fallback.")
         self.vision_model = "meta-llama/llama-4-scout-17b-16e-instruct"
         
         # Load local YOLO model
@@ -51,6 +53,9 @@ class VisionLayer:
             return []
 
     def _groq_vision(self, image_path: str) -> dict:
+        if not self.groq_client:
+            raise Exception("No Groq client available, skipping Groq API call.")
+
         with open(image_path, "rb") as f:
             b64 = base64.b64encode(f.read()).decode()
 
