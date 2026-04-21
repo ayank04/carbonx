@@ -3,7 +3,6 @@ const multer = require('multer');
 const { uploadAndVerify, mintCredit, getVerificationByHash } = require('../controllers/uploadController');
 const { getWallet, redeemCatalogItem, getMarketListings, createListing, purchaseListing } = require('../controllers/marketplaceController');
 const { rateLimiter } = require('../middleware/rateLimiter');
-const { getESGSummary } = require('../controllers/esgController');
 
 const router = express.Router();
 
@@ -30,8 +29,4 @@ router.get('/marketplace/listings', getMarketListings);
 router.post('/marketplace/list', createListing);
 router.post('/marketplace/purchase', purchaseListing);
 
-// --- ESG DASHBOARD ---
-router.get('/esg/summary/:userId', getESGSummary);
-
 module.exports = router;
-
