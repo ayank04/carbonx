@@ -1,0 +1,200 @@
+{
+  "wallets": [
+    {
+      "userKey": "any@op",
+      "credits": 12.4,
+      "totalEarned": 14.4,
+      "totalSpent": 2,
+      "tier": "SILVER",
+      "purchases": [
+        {
+          "item": "Plant a Tree",
+          "amount": 2,
+          "timestamp": 1775471206414,
+          "status": "Completed"
+        }
+      ],
+      "transactions": [
+        {
+          "type": "earned",
+          "amount": 9.4,
+          "timestamp": 1775471091245,
+          "item": "solar_install",
+          "ipfsUri": "ipfs://QmNpqbsf9UCTFsH9YEfKdfUH9HnHQkGCmz4CFigZFrvHph",
+          "imageHash": "4f4707fafc141adf2c2b867751da813dddb6f735bc936855d7e9439ccea6a498"
+        },
+        {
+          "type": "spent",
+          "amount": 2,
+          "item": "Plant a Tree",
+          "timestamp": 1775471206414
+        },
+        {
+          "type": "earned",
+          "amount": 5,
+          "timestamp": 1775471242601
+        }
+      ]
+    },
+    {
+      "userKey": "user_001",
+      "credits": 0,
+      "totalEarned": 0,
+      "totalSpent": 0,
+      "tier": "BRONZE",
+      "purchases": [],
+      "transactions": []
+    },
+    {
+      "userKey": "::1",
+      "credits": 14.8,
+      "totalEarned": 14.8,
+      "totalSpent": 0,
+      "tier": "SILVER",
+      "purchases": [],
+      "transactions": [
+        {
+          "type": "earned",
+          "amount": 7.4,
+          "timestamp": 1775454104692
+        },
+        {
+          "type": "earned",
+          "amount": 7.4,
+          "timestamp": 1775454486175
+        }
+      ]
+    },
+    {
+      "userKey": "mimanshamishra2005@gmail.com",
+      "credits": 0,
+      "totalEarned": 0,
+      "totalSpent": 0,
+      "tier": "BRONZE",
+      "purchases": [],
+      "transactions": []
+    }
+  ],
+  "marketplaceListings": [
+    {
+      "id": "1775471226127",
+      "seller": "any@op",
+      "tier": "SILVER",
+      "amount": 5,
+      "price": 10,
+      "activity": "Verified AI Action",
+      "imageHash": "usr-1775471226122",
+      "status": "Sold",
+      "createdAt": 1775471226127,
+      "soldTo": "any@op",
+      "soldAt": 1775471242601
+    }
+  ],
+  "records": [
+    {
+      "imageHash": "4f4707fafc141adf2c2b867751da813dddb6f735bc936855d7e9439ccea6a498",
+      "createdAt": 1775471038961,
+      "ip": "::1",
+      "sessionKey": "::1",
+      "finalDecision": "ACCEPT",
+      "similarityScore": null,
+      "activity": "solar_install",
+      "ipfsUri": "ipfs://QmNpqbsf9UCTFsH9YEfKdfUH9HnHQkGCmz4CFigZFrvHph",
+      "minted": true,
+      "mintedAt": 1775471091244,
+      "mintTxId": "0xca5c442aea45fec2b252f8403c0360bbbf5a05205eb64d2f2ba5551eb77ef707",
+      "impactScore": 94,
+      "trustBreakdown": null,
+      "impact": null,
+      "explanation": null,
+      "detections": []
+    },
+    {
+      "imageHash": "4f4707fafc141adf2c2b867751da813dddb6f735bc936855d7e9439ccea6a498",
+      "createdAt": 1775471340048,
+      "ip": "::1",
+      "sessionKey": "::1",
+      "finalDecision": "ACCEPT",
+      "similarityScore": null,
+      "activity": "solar_install",
+      "ipfsUri": "ipfs://QmNpqbsf9UCTFsH9YEfKdfUH9HnHQkGCmz4CFigZFrvHph",
+      "minted": false,
+      "mintedAt": null,
+      "mintTxId": null,
+      "impactScore": 94,
+      "trustBreakdown": null,
+      "impact": null,
+      "explanation": null,
+      "detections": []
+    },
+    {
+      "imageHash": "c4a704da01a34942002c4a66c79f0d844b53fb65815d451e67d70817d8d79a7c",
+      "createdAt": 1775471402914,
+      "ip": "::1",
+      "sessionKey": "::1",
+      "finalDecision": "REJECT",
+      "similarityScore": null,
+      "activity": "walking",
+      "ipfsUri": null,
+      "minted": false,
+      "mintedAt": null,
+      "mintTxId": null,
+      "impactScore": 21,
+      "trustBreakdown": null,
+      "impact": null,
+      "explanation": null,
+      "detections": []
+    },
+    {
+      "imageHash": "2b969b851539658a17e120ae32a6be156167a4f4d94b39bcfd090197bb475319",
+      "createdAt": 1775454011842,
+      "ip": "::1",
+      "sessionKey": "::1",
+      "finalDecision": "REJECT",
+      "similarityScore": null,
+      "activity": "general_activity",
+      "ipfsUri": null,
+      "minted": false,
+      "mintedAt": null,
+      "mintTxId": null,
+      "trustBreakdown": null,
+      "impact": null,
+      "explanation": null,
+      "detections": []
+    },
+    {
+      "imageHash": "444185eb20b93d203b47c3477906787db7c57521a5f8164b6c0a9d77620e48d2",
+      "createdAt": 1775454104689,
+      "ip": "::1",
+      "sessionKey": "::1",
+      "finalDecision": "ACCEPT",
+      "similarityScore": null,
+      "activity": "tree_planting",
+      "ipfsUri": "ipfs://mock-444185eb20b93d203b47c3477906787d",
+      "minted": true,
+      "mintedAt": 1775454112557,
+      "mintTxId": "mint-1775454112462",
+      "trustBreakdown": null,
+      "impact": null,
+      "explanation": null,
+      "detections": []
+    },
+    {
+      "imageHash": "444185eb20b93d203b47c3477906787db7c57521a5f8164b6c0a9d77620e48d2",
+      "createdAt": 1775454486172,
+      "ip": "::1",
+      "sessionKey": "::1",
+      "finalDecision": "ACCEPT",
+      "similarityScore": null,
+      "activity": "tree_planting",
+      "ipfsUri": "ipfs://mock-444185eb20b93d203b47c3477906787d",
+      "minted": false,
+      "mintedAt": null,
+      "mintTxId": null,
+      "trustBreakdown": null,
+      "impact": null,
+      "explanation": null,
+      "detections": []
+    }
+  ]
+}
