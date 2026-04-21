@@ -12,7 +12,7 @@ class VisionLayer:
         else:
             self.groq_client = None
             print("WARNING: GROQ_API_KEY missing, VisionLayer will use YOLO fallback.")
-        self.vision_model = "meta-llama/llama-4-scout-17b-16e-instruct"
+        self.vision_model = "llama-3.2-11b-vision-preview"
         
         # Load local YOLO model
         model_path = os.getenv("YOLO_MODEL", "yolov8n.pt")
