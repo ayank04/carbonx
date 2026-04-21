@@ -7,7 +7,7 @@ import { ShoppingBag, Coins, X, ShieldCheck, Loader2, Lock, ArrowRight, Trending
 import axios from "axios";
 import { useWallet } from "@/hooks/use-wallet";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api`;
 
 // --- STATIC CATALOG (UI only) ---
 const CATALOG_ITEMS = [

@@ -37,7 +37,7 @@ const CreditsPage = () => {
             onClick={async () => {
               if (window.confirm("⚠️ DANGER: This will permanently clear ALL transaction data and ledger hashes. Are you sure?")) {
                 try {
-                  await axios.post("http://localhost:5000/api/dangerous/reset");
+                  await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/dangerous/reset`);
                   
                   // Double Purge: Clear local storage as well
                   const userStr = localStorage.getItem("user");

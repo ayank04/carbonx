@@ -53,7 +53,7 @@ const UploadPage = () => {
 
       formData.append('isReevaluation', reevData ? 'true' : 'false');
 
-      const response = await fetch("http://localhost:5000/api/upload", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/upload`, {
         method: "POST",
         body: formData,
       });
@@ -150,7 +150,7 @@ const UploadPage = () => {
           return "anonymous";
         })();
 
-        const mintResponse = await fetch('http://localhost:5000/api/mint-credit', {
+        const mintResponse = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/mint-credit`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

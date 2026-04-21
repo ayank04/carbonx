@@ -20,7 +20,7 @@ const HeroSection = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5000/api/upload", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/upload`, {
         method: "POST",
         body: formData,
       });
