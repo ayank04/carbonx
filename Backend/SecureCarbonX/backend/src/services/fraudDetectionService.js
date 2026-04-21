@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const os = require('os');
 const Jimp = require('jimp');
 
-const DATA_DIR = path.join(__dirname, '..', 'data');
+const DATA_DIR = process.env.VERCEL ? path.join(os.tmpdir(), 'carbonx-data') : path.join(__dirname, '..', 'data');
 const STORE_FILE = path.join(DATA_DIR, 'fraud-store.json');
 const LOG_FILE = path.join(DATA_DIR, 'suspicious-activity.log');
 
