@@ -72,7 +72,7 @@ class NarrativeLayer:
             print(f"What Is Happening Error: {e}")
             return (
                 f"The image shows a person engaged in {activity.replace('_', ' ')} "
-                f"in a {vision.get('environment', 'outdoor')} setting."
+                f"in a {vision.get('environment', 'outdoor')} setting. [DEBUG: {str(e)}]"
             )
 
     def generate_improvements(self, activity: str, impact: dict, vision: dict) -> list:
